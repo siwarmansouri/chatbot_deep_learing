@@ -1,13 +1,15 @@
-## Overview
+# Overview
 Simple chatbot in python with deep learning
 
-## How to run locally
-pip install --user -U nltk
-pip install --user -U numpy
-python3 chatbot.py
+# How to run locally
+'pip install --user -U nltk'
+
+'pip install --user -U numpy'
+
+'python3 chatbot.py'
 
 
-## Steps:
+# Steps:
 
 - Prepare a dictionary  of intents (patterns, tags, responses)
 - Create a vocabulary of all of the words used in the patterns, associated tags and classes
@@ -18,9 +20,9 @@ python3 chatbot.py
 
 
 
-## Details
+# Details
 
-Data preparation
+## Data preparation
 
 The dictionary = input data
 
@@ -28,10 +30,10 @@ used a dictionary to represent an intents JSON file
 intents(json)= tags -> patterns(the queries posed by the user) -> responses
  Prepare tags in advance 
 
-Create a vocabulary 
+### Create a vocabulary 
 
-# Loop through all the intents, tokenize each pattern and append tokens to words, the patterns and the associated tag to their associated list
-# add the tag to the classes if it's not there already 
+1. Loop through all the intents, tokenize each pattern and append tokens to words, the patterns and the associated tag to their associated list
+2. add the tag to the classes if it's not there already 
 
 
 * words: vocabulary of all of the words used in the patterns
@@ -39,10 +41,10 @@ Create a vocabulary
 * doc_y: list of all the associated tags to go with each pattern in the intents file
 * classes: the tags of each intent (unique)
 
-Lemmatize the vocab
+## Lemmatize the vocab
 
-# lemmatize all the words in the vocab and convert them to lowercase if the words don't appear in punctuation
-# sorting the vocab and classes in alphabetical order and ensure no duplicates occur
+lemmatize all the words in the vocab and convert them to lowercase if the words don't appear in punctuation
+sorting the vocab and classes in alphabetical order and ensure no duplicates occur
 
 
 * Words : lemmatized and sorted in alphabetical order
@@ -59,7 +61,7 @@ the deep learning model
 Sequential
 
 
-Data processing: Bag-of-Words Model
+## Data processing: Bag-of-Words Model
 
 A bag-of-words is a representation of text that describes the occurrence of words within a document.
 
@@ -77,7 +79,7 @@ split the features and target labels (using numpy)
 -> train_X & train_y are used to train the deep learning model 
 
 
-## Example of execution
+# Example of execution
 
 pattern1: Hello there !
 
